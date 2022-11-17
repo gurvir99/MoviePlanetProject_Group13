@@ -1,0 +1,14 @@
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\bin\Debug\net6.0\MoviePlanetLibrary.deps.json
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\bin\Debug\net6.0\MoviePlanetLibrary.runtimeconfig.json
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\bin\Debug\net6.0\MoviePlanetLibrary.dll
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\bin\Debug\net6.0\MoviePlanetLibrary.pdb
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.csproj.AssemblyReference.cache
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.AssemblyInfoInputs.cache
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.AssemblyInfo.cs
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.dll
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\obj\Debug\net6.0\refint\MoviePlanetLibrary.dll
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.pdb
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.genruntimeconfig.cache
+C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\obj\Debug\net6.0\ref\MoviePlanetLibrary.dll
