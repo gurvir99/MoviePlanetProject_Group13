@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MoviePlanetLibrary.Models;
 
-public partial class MovieInfo
+public partial class Movies
 {
     public int MovieEidr { get; set; }
 

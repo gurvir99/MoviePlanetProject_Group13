@@ -17,7 +17,7 @@ public partial class MoviePlanetDbContext : DbContext
 
     public virtual DbSet<CompanyInfo> CompanyInfos { get; set; }
 
-    public virtual DbSet<MovieInfo> MovieInfos { get; set; }
+    public virtual DbSet<Movies> MovieInfos { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
@@ -36,7 +36,7 @@ public partial class MoviePlanetDbContext : DbContext
             entity.Property(e => e.Headquarters).HasMaxLength(150);
         });
 
-        modelBuilder.Entity<MovieInfo>(entity =>
+        modelBuilder.Entity<Movies>(entity =>
         {
             entity.HasKey(e => e.MovieEidr).HasName("PK__MovieInf__043BD9955DF56F71");
 
@@ -52,7 +52,7 @@ public partial class MoviePlanetDbContext : DbContext
             entity.Property(e => e.ReleaseDate).HasColumnType("date");
             entity.Property(e => e.WorldwideProfit).HasColumnType("decimal(15, 0)");
 
-            entity.HasOne(d => d.Company).WithMany(p => p.MovieInfos)
+            entity.HasOne(d => d.Company).WithMany(p => p.Movies)
                 .HasForeignKey(d => d.CompanyId)
                 .HasConstraintName("FK_Movies_Companies_CompanyId");
         });

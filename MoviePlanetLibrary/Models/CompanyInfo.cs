@@ -15,5 +15,5 @@ public partial class CompanyInfo
 
     public int YearFounded { get; set; }
 
-    public virtual ICollection<MovieInfo> MovieInfos { get; } = new List<MovieInfo>();
+    public virtual ICollection<Movies> Movies { get; } = new List<Movies>();
 }

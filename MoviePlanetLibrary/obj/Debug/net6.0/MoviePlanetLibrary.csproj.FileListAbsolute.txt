@@ -12,3 +12,17 @@ C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\
 C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.pdb
 C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.genruntimeconfig.cache
 C:\Users\Arshvir\Desktop\gurvir all\Semester 6\comp306-APIEngineering&CloudComp\301112565(khaira)_301108852(singh)_Group13\MoviePlanetLibrary\obj\Debug\net6.0\ref\MoviePlanetLibrary.dll
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\bin\Debug\net6.0\MoviePlanetLibrary.deps.json
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\bin\Debug\net6.0\MoviePlanetLibrary.runtimeconfig.json
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\bin\Debug\net6.0\MoviePlanetLibrary.dll
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\bin\Debug\net6.0\MoviePlanetLibrary.pdb
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.csproj.AssemblyReference.cache
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.AssemblyInfoInputs.cache
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.AssemblyInfo.cs
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.csproj.CoreCompileInputs.cache
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.dll
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\obj\Debug\net6.0\refint\MoviePlanetLibrary.dll
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.pdb
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\obj\Debug\net6.0\MoviePlanetLibrary.genruntimeconfig.cache
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetLibrary\obj\Debug\net6.0\ref\MoviePlanetLibrary.dll

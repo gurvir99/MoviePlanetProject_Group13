@@ -5,15 +5,15 @@ namespace MoviePlanetAPI.Services
 {
     public interface IMoviePlanetRepository
     {
-        Task<bool> CopmanyExists(int companyId);
-        Task<IEnumerable<CompanyInfo>> GetCompanyInfoes();
+        Task<bool> CompanyExists(int companyId);
+        Task<IEnumerable<CompanyInfo>> GetCompanyInfos();
         Task<CompanyInfo> GetCompanyById(int companyId, bool includeMovies);
 
-        Task<IEnumerable<MovieInfo>> GetMoviesForCompany(int companyId);
-        Task<MovieInfo> GetMovieForCompany(int companyId, int movieEidr);
+        Task<IEnumerable<Movies>> GetMoviesForCompany(int companyId);
+        Task<Movies> GetMovieForCompany(int companyId, int movieEidr);
 
-        Task AddMovieForCity(int companyId, MovieInfo movie);
-        void DeleteMovie(MovieInfo movie);
+        Task AddMovieForCompany(int companyId, Movies movie);
+        void DeleteMovie(Movies movie);
 
         Task<bool> Save();
     }

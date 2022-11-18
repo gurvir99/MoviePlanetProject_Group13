@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bJ63C9KJ+GrsX+PuUFkgjG0QE0lBrHBp9RsbQgeJugs=",
+  "Source": "MoviePlanetAPI",
+  "BasePath": "_content/MoviePlanetAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
