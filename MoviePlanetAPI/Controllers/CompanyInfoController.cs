@@ -1,4 +1,7 @@
-﻿using AutoMapper;
+﻿using System.Diagnostics;
+using AutoMapper;
+using Azure;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using MoviePlanetAPI.DTOs;
 using MoviePlanetAPI.Services;
@@ -55,21 +58,144 @@ namespace MoviePlanetAPI.Controllers
 
 
         // POST api/<CompanyInfoController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("/api/companyInfo")]
+        public async Task<ActionResult<CompanyInfoDto>> CreateCompany([FromBody] CompanyInfoForCreationDto companyInfoForCreation)
         {
+            if (companyInfoForCreation == null) return BadRequest();
+
+            if (companyInfoForCreation.Description == companyInfoForCreation.CompanyName)
+            {
+                ModelState.AddModelError("Description", "The provided description should be different from the name.");
+            }
+
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            if (companyInfoForCreation.CompanyName != null && await _moviePlanetRepository.CompanyExists(companyInfoForCreation.CompanyName))
+            {
+                ModelState.AddModelError("Company", "The provided company already exists.");
+            }
+
+            var finalCompany = _mapper.Map<CompanyInfo>(companyInfoForCreation);
+
+            await _moviePlanetRepository.AddCompany(finalCompany);
+
+            if (!await _moviePlanetRepository.Save())
+            {
+                return StatusCode(500, "A problem happened while handling your request.");
+            }
+
+            var createdCompanyToReturn = _mapper.Map<CompanyInfoDto>(finalCompany);
+
+            return Ok(createdCompanyToReturn);
+
         }
+
+
+
+
+        //[HttpPost]
+        //public void Post([FromBody] string value)
+        //{
+        //}
 
         // PUT api/<CompanyInfoController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("{companyId}")]
+        public async Task<ActionResult> UpdateCompany(int companyId,
+            [FromBody] CompanyInfoForUpdateDto companyInfoForUpdate)
         {
+            if (companyInfoForUpdate == null) return BadRequest();
+
+            if (companyInfoForUpdate.Description == companyInfoForUpdate.CompanyName)
+            {
+                ModelState.AddModelError("Description", "The provided description should be different from the name.");
+            }
+
+            if(!ModelState.IsValid) return BadRequest(ModelState);
+
+            //if(!await _moviePlanetRepository.CompanyExists(companyInfoForUpdate.CompanyName)) return NotFound();
+
+            CompanyInfo oldCompqanyCompanyInfoEntity = await _moviePlanetRepository.GetCompanyById(companyId, false);
+
+            if (oldCompqanyCompanyInfoEntity == null) return NotFound();
+
+            _mapper.Map(companyInfoForUpdate, oldCompqanyCompanyInfoEntity);
+
+            if (!await _moviePlanetRepository.Save())
+            {
+                return StatusCode(500, "A problem happened while handling your request.");
+            }
+
+            return NoContent();
         }
 
+
+        //[HttpPut("{id}")]
+        //public void Put(int id, [FromBody] string value)
+        //{
+        //}
+
         // DELETE api/<CompanyInfoController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete]
+        public async Task<ActionResult> DeleteCompanyInfo(int companyId,
+            [FromBody] string companyName)
         {
+            if (!await _moviePlanetRepository.CompanyExists(companyName)) return NotFound();
+
+            CompanyInfo companyInfoEntity2Delete = await _moviePlanetRepository.GetCompanyById(companyId, false);
+
+            if(companyInfoEntity2Delete == null) return NotFound();
+
+            _moviePlanetRepository.DeleteCompanyInfo(companyInfoEntity2Delete);
+
+            if (!await _moviePlanetRepository.Save())
+            {
+                return StatusCode(500, "A problem happened while handling your request.");
+            }
+
+            return NoContent();
+        }
+
+        //[HttpDelete("{id}")]
+        //public void Delete(int id)
+        //{
+        //}
+
+        [HttpPatch]
+        public async Task<ActionResult> PartiallyUpdateCompanyInfo(int companyId,
+            JsonPatchDocument<CompanyInfoForUpdateDto> patchDocument)
+        {
+            //if (!await _moviePlanetRepository.CompanyExists(companyId))
+            //{
+            //    return NotFound();
+            //}
+            CompanyInfo companyEntity = await _moviePlanetRepository.GetCompanyById(companyId, false);
+            if (companyEntity == null)
+            {
+                return NotFound();
+            }
+
+            Debug.WriteLine("works");
+            Debug.WriteLine(companyEntity.CompanyId);
+            Trace.WriteLine(companyEntity.CompanyName);
+
+            var companyToPatch = _mapper.Map<CompanyInfoForUpdateDto>(companyEntity);
+
+            patchDocument.ApplyTo(companyToPatch, ModelState);
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (!TryValidateModel(companyToPatch))
+            {
+                return BadRequest(ModelState);
+            }
+
+            _mapper.Map(companyToPatch, companyEntity);
+            await _moviePlanetRepository.Save();
+
+            return NoContent();
         }
     }
 }

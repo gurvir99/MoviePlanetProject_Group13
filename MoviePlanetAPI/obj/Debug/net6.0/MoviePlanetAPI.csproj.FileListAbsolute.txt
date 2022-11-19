@@ -76,3 +76,7 @@ D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112
 D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetAPI\obj\Debug\net6.0\MoviePlanetAPI.pdb
 D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetAPI\obj\Debug\net6.0\MoviePlanetAPI.genruntimeconfig.cache
 D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetAPI\obj\Debug\net6.0\ref\MoviePlanetAPI.dll
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetAPI\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

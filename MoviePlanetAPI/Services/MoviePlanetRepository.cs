@@ -13,9 +13,9 @@ namespace MoviePlanetAPI.Services
             _context = context;
         }
 
-        public async Task<bool> CompanyExists(int companyId)
+        public async Task<bool> CompanyExists(string companyName)
         {
-            return await _context.CompanyInfos.AnyAsync<CompanyInfo>(c => c.CompanyId == companyId);
+            return await _context.CompanyInfos.AnyAsync<CompanyInfo>(c => c.CompanyName == companyName);
         }
 
         public async Task<IEnumerable<CompanyInfo>> GetCompanyInfos()
@@ -55,6 +55,11 @@ namespace MoviePlanetAPI.Services
             var city = await GetCompanyById(companyId, false);
             city.Movies.Add(movie);
         }
+        public Task AddCompany(CompanyInfo companyInfo)
+        {
+            _context.CompanyInfos.Add(companyInfo);
+            return Task.CompletedTask;
+        }
 
         public void DeleteMovie(Movies movie)
         {
@@ -64,6 +69,11 @@ namespace MoviePlanetAPI.Services
         public async Task<bool> Save()
         {
             return (await _context.SaveChangesAsync()) > 0;
+        }
+
+        public void DeleteCompanyInfo(CompanyInfo companyInfoEntity2Delete)
+        {
+            _context.CompanyInfos.Remove(companyInfoEntity2Delete);
         }
     }
 }
