@@ -122,7 +122,7 @@ namespace MoviePlanetAPI.Controllers
             if (!await _moviePlanetRepository.CompanyExistsById(companyId)) return NotFound();
 
             Movies movieEntity2Delete = await _moviePlanetRepository.GetMovieForCompany(companyId, movieEidr);
-             
+
             _moviePlanetRepository.DeleteMovie(movieEntity2Delete);
 
             if (!await _moviePlanetRepository.Save())
@@ -143,10 +143,6 @@ namespace MoviePlanetAPI.Controllers
             {
                 return NotFound();
             }
-
-            Debug.WriteLine("Found Movie:");
-            Debug.WriteLine(movieEntity.MovieEidr);
-            Trace.WriteLine(movieEntity.MovieTitle);
 
             var movieToPatch = _mapper.Map<MovieForPatchDto>(movieEntity);
 

@@ -154,10 +154,6 @@ namespace MoviePlanetAPI.Controllers
                 return NotFound();
             }
 
-            Debug.WriteLine("works");
-            Debug.WriteLine(companyEntity.CompanyId);
-            Trace.WriteLine(companyEntity.CompanyName);
-
             var companyToPatch = _mapper.Map<CompanyInfoForPatchDto>(companyEntity);
 
             patchDocument.ApplyTo(companyToPatch, ModelState);
