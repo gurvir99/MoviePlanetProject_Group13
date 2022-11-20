@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MoviePlanetLibrary.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace MoviePlanetAPI.DTOs
 {
-    public class CompanyInfoForUpdateDto
+    public class CompanyInfoForPatchDto
     {
-/*        [Required(ErrorMessage = "You should provide a Company ID.")]
-        public int CompanyId { get; set; }*/
+        //[Required(ErrorMessage = "You should provide a Company ID.")]
+        public int CompanyId { get; set; }
 
         //[Required(ErrorMessage = "You should provide a Company Name.")]
         [MaxLength(50)]

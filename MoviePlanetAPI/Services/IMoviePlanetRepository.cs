@@ -6,6 +6,7 @@ namespace MoviePlanetAPI.Services
     public interface IMoviePlanetRepository
     {
         Task<bool> CompanyExists(string companyName);
+        Task<bool> CompanyExistsById(int companyId);
         Task<IEnumerable<CompanyInfo>> GetCompanyInfos();
         Task<CompanyInfo> GetCompanyById(int companyId, bool includeMovies);
 

@@ -18,6 +18,11 @@ namespace MoviePlanetAPI.Services
             return await _context.CompanyInfos.AnyAsync<CompanyInfo>(c => c.CompanyName == companyName);
         }
 
+        public async Task<bool> CompanyExistsById(int id)
+        {
+            return await _context.CompanyInfos.AnyAsync<CompanyInfo>(c => c.CompanyId == id);
+        }
+
         public async Task<IEnumerable<CompanyInfo>> GetCompanyInfos()
         {
             var result = _context.CompanyInfos.OrderBy(c => c.CompanyName);

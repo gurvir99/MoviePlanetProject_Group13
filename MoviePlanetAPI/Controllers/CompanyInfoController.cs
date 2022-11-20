@@ -90,14 +90,6 @@ namespace MoviePlanetAPI.Controllers
 
         }
 
-
-
-
-        //[HttpPost]
-        //public void Post([FromBody] string value)
-        //{
-        //}
-
         // PUT api/<CompanyInfoController>/5
         [HttpPut("{companyId}")]
         public async Task<ActionResult> UpdateCompany(int companyId,
@@ -128,18 +120,11 @@ namespace MoviePlanetAPI.Controllers
             return NoContent();
         }
 
-
-        //[HttpPut("{id}")]
-        //public void Put(int id, [FromBody] string value)
-        //{
-        //}
-
         // DELETE api/<CompanyInfoController>/5
         [HttpDelete]
-        public async Task<ActionResult> DeleteCompanyInfo(int companyId,
-            [FromBody] string companyName)
+        public async Task<ActionResult> DeleteCompanyInfo(int companyId)
         {
-            if (!await _moviePlanetRepository.CompanyExists(companyName)) return NotFound();
+            if (!await _moviePlanetRepository.CompanyExistsById(companyId)) return NotFound();
 
             CompanyInfo companyInfoEntity2Delete = await _moviePlanetRepository.GetCompanyById(companyId, false);
 
@@ -155,20 +140,15 @@ namespace MoviePlanetAPI.Controllers
             return NoContent();
         }
 
-        //[HttpDelete("{id}")]
-        //public void Delete(int id)
-        //{
-        //}
-
         [HttpPatch]
         public async Task<ActionResult> PartiallyUpdateCompanyInfo(int companyId,
-            JsonPatchDocument<CompanyInfoForUpdateDto> patchDocument)
+            JsonPatchDocument<CompanyInfoForPatchDto> patchDocument)
         {
             //if (!await _moviePlanetRepository.CompanyExists(companyId))
             //{
             //    return NotFound();
             //}
-            CompanyInfo companyEntity = await _moviePlanetRepository.GetCompanyById(companyId, false);
+            var companyEntity = await _moviePlanetRepository.GetCompanyById(companyId, false);
             if (companyEntity == null)
             {
                 return NotFound();
@@ -178,7 +158,7 @@ namespace MoviePlanetAPI.Controllers
             Debug.WriteLine(companyEntity.CompanyId);
             Trace.WriteLine(companyEntity.CompanyName);
 
-            var companyToPatch = _mapper.Map<CompanyInfoForUpdateDto>(companyEntity);
+            var companyToPatch = _mapper.Map<CompanyInfoForPatchDto>(companyEntity);
 
             patchDocument.ApplyTo(companyToPatch, ModelState);
 
