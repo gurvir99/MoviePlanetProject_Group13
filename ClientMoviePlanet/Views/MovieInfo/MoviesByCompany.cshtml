@@ -1,0 +1,99 @@
+﻿@model IEnumerable<ClientMoviePlanet.Models.MovieInfo>
+
+@{
+    ViewData["Title"] = "MoviesByCompany";
+}
+
+<h1>Movies: @ViewBag.CompanyName</h1>
+
+<p>
+    <button type="button" onclick="location.href='@Url.Action("Create", "MovieInfo")'" class="btn btn-success">Add Movie</button>
+    <form asp-action="MoviesByCompany" enctype="multipart/form-data">
+        @*enctype="multipart/form-data" is used to handle file uploads using form*@
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label class="control-label">Movie EIDR</label>
+            <input style="width:200px" type="number" name="eidr" id="eidr" min="0" class="form-control" required />
+            <input type="hidden" class="form-control" name="companyId" id="companyId" value="@ViewBag.CompanyId" readonly required />
+        </div>
+        <br />
+        <div class="form-group">
+            <input type="submit" value="Search" class="btn btn-primary" />
+        </div>
+    </form>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Movie EIDR
+            </th>
+            <th>
+                Movie Title
+            </th>
+            <th>
+                Director(s)
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Genre(s)
+            </th>
+            <th>
+                Release Date
+            </th>
+            <th>
+                Worldwide Profit
+            </th>
+            <th>
+                IMDB Rating
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.movieEidr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.movieTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.director)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.genre)
+            </td>
+                <td>@{
+                        var date = item.releaseDate.ToString("dd/MM/yyyy");
+                        @Html.DisplayFor(modelItem => date)
+                }
+            </td>
+            <td>@{
+                        string profit = item.worldwideProfit.ToString("C");
+                        @Html.DisplayFor(modelItem => profit)
+                 }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.imdbRating)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) 
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) 
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<br />
+<p>
+    <button type="button" onclick="location.href='@Url.Action("Index", "Home")'" class="btn btn-success">Back</button>
+</p>
+

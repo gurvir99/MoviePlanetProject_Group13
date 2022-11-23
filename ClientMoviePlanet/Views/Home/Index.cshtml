@@ -1,42 +1,45 @@
-﻿@model IEnumerable<ClientMoviePlanet.Models.MovieInfo>
+﻿@model IEnumerable<ClientMoviePlanet.Models.CompanyInfo>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
+<h1>All Companies</h1>
 <p>
-    <a asp-action="Create">Create New</a>
+    <button type="button" onclick="location.href='@Url.Action("Create", "Home")'" class="btn btn-success">Add Company</button>
+    <form asp-action="Index" enctype="multipart/form-data">
+        @*enctype="multipart/form-data" is used to handle file uploads using form*@
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label class="control-label">Company ID</label>
+            <input style="width:200px" type="number" name="companyId" id="companyId" min="0" class="form-control" required />
+        </div>
+        <br />
+        <div class="form-group">
+            <input type="submit" value="Search" class="btn btn-primary" />
+        </div>
+    </form>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.movieEidr)
+                Company ID
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.movieTitle)
+                Company Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.director)
+                Headquarters
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.description)
+                Description
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.genre)
+                Founded In
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.releaseDate)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.worldwideProfit)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.imdbRating)
-            </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -44,33 +47,36 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.movieEidr)
+                    @Html.DisplayFor(modelItem => item.companyId)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.movieTitle)
+                    @Html.DisplayFor(modelItem => item.companyName)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.director)
+                    @Html.DisplayFor(modelItem => item.headquarters)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.description)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.genre)
+                    @Html.DisplayFor(modelItem => item.yearFounded)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.releaseDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.worldwideProfit)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.imdbRating)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+      @*              @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) 
+                    @Html.ActionLink("Movies", "Movies", new { companyId=item.companyId })
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                    <a asp-controller="MovieInfo" asp-action="MoviesByCompany"
+                     asp-route-companyId="@item.companyId"
+                     asp-route-companyName="@item.companyName"
+                     title="Movies">Movies</a>
+                    <a asp-controller="MovieInfo" asp-action="Edit"
+                     asp-route-companyId="@item.companyId"
+                     asp-route-companyName="@item.companyName"
+                     title="Edit">Edit</a>
+                    <a asp-controller="MovieInfo" asp-action="Delete"
+                     asp-route-companyId="@item.companyId"
+                     asp-route-companyName="@item.companyName"
+                     title="Delete">Delete</a>
                 </td>
             </tr>
         }

@@ -163,3 +163,4 @@ C:\Users\Arshvir\Documents\GitHub\301112565-khaira-_301108852-singh-_Group13\Mov
 C:\Users\Arshvir\Documents\GitHub\301112565-khaira-_301108852-singh-_Group13\MoviePlanetAPI\obj\Debug\net6.0\MoviePlanetAPI.genruntimeconfig.cache
 C:\Users\Arshvir\Documents\GitHub\301112565-khaira-_301108852-singh-_Group13\MoviePlanetAPI\obj\Debug\net6.0\ref\MoviePlanetAPI.dll
 D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\MoviePlanetAPI\bin\Debug\net6.0\aws-ecs-tools-defaults.json
+C:\Users\Arshvir\Documents\GitHub\301112565-khaira-_301108852-singh-_Group13\MoviePlanetAPI\bin\Debug\net6.0\aws-ecs-tools-defaults.json

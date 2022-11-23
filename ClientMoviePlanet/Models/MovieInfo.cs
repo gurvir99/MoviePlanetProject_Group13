@@ -8,7 +8,7 @@
         public string description { get; set; }
         public string genre { get; set; }
         public DateTime releaseDate { get; set; }
-        public string worldwideProfit { get; set; }
+        public decimal worldwideProfit { get; set; }
         public float imdbRating { get; set; }
     }
 }
