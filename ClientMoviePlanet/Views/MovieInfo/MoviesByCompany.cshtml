@@ -7,7 +7,7 @@
 <h1>Movies by: @ViewBag.CompanyName</h1>
 
 <p>
-	<button type="button" onclick="location.href='@Url.Action("Create", "MovieInfo")'" class="btn btn-success">Add Movie</button>
+	<button type="button" onclick="location.href='@Url.Action("Create", "MovieInfo", new { companyId = @ViewBag.CompanyId, companyName = ViewBag.CompanyName})'" class="btn btn-success">Add Movie</button>
 	<form asp-action="MoviesByCompany" enctype="multipart/form-data">
 		@*enctype="multipart/form-data" is used to handle file uploads using form*@
 		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -89,7 +89,11 @@
 				<td>
 					@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
 					@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })
-					@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+					<a asp-controller="MovieInfo" asp-action="Delete"
+				     asp-route-companyId=@ViewBag.CompanyId
+				     asp-route-movieEidr="@item.movieEidr"
+				     asp-route-companyName=@ViewBag.CompanyName
+				     title="Delete">Delete</a>
 				</td>
 			</tr>
 		}
@@ -97,6 +101,6 @@
 </table>
 <br />
 <p>
-	<button type="button" onclick="location.href='@Url.Action("Index", "Home")'" class="btn btn-success">Back</button>
+	<button type="button" onclick="location.href='@Url.Action("Index", "CompanyInfo")'" class="btn btn-success">Back</button>
 </p>
 

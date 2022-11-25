@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OneDrive - Centennial College\\Semester6\\API Cloud\\GroupProject\\Project\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetAPI\\MoviePlanetAPI.csproj": {}
+    "C:\\Users\\Arshvir\\Documents\\GitHub\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetAPI\\MoviePlanetAPI.csproj": {}
   },
   "projects": {
-    "D:\\OneDrive - Centennial College\\Semester6\\API Cloud\\GroupProject\\Project\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetAPI\\MoviePlanetAPI.csproj": {
+    "C:\\Users\\Arshvir\\Documents\\GitHub\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetAPI\\MoviePlanetAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OneDrive - Centennial College\\Semester6\\API Cloud\\GroupProject\\Project\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetAPI\\MoviePlanetAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Arshvir\\Documents\\GitHub\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetAPI\\MoviePlanetAPI.csproj",
         "projectName": "MoviePlanetAPI",
-        "projectPath": "D:\\OneDrive - Centennial College\\Semester6\\API Cloud\\GroupProject\\Project\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetAPI\\MoviePlanetAPI.csproj",
-        "packagesPath": "C:\\Users\\gurkirat\\.nuget\\packages\\",
-        "outputPath": "D:\\OneDrive - Centennial College\\Semester6\\API Cloud\\GroupProject\\Project\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetAPI\\obj\\",
+        "projectPath": "C:\\Users\\Arshvir\\Documents\\GitHub\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetAPI\\MoviePlanetAPI.csproj",
+        "packagesPath": "C:\\Users\\Arshvir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Arshvir\\Documents\\GitHub\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gurkirat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Arshvir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,14 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\OneDrive - Centennial College\\Semester6\\API Cloud\\GroupProject\\Project\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetLibrary\\MoviePlanetLibrary.csproj": {
-                "projectPath": "D:\\OneDrive - Centennial College\\Semester6\\API Cloud\\GroupProject\\Project\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetLibrary\\MoviePlanetLibrary.csproj"
+              "C:\\Users\\Arshvir\\Documents\\GitHub\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetLibrary\\MoviePlanetLibrary.csproj": {
+                "projectPath": "C:\\Users\\Arshvir\\Documents\\GitHub\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetLibrary\\MoviePlanetLibrary.csproj"
               }
             }
           }
@@ -88,25 +84,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\OneDrive - Centennial College\\Semester6\\API Cloud\\GroupProject\\Project\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetLibrary\\MoviePlanetLibrary.csproj": {
+    "C:\\Users\\Arshvir\\Documents\\GitHub\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetLibrary\\MoviePlanetLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OneDrive - Centennial College\\Semester6\\API Cloud\\GroupProject\\Project\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetLibrary\\MoviePlanetLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Arshvir\\Documents\\GitHub\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetLibrary\\MoviePlanetLibrary.csproj",
         "projectName": "MoviePlanetLibrary",
-        "projectPath": "D:\\OneDrive - Centennial College\\Semester6\\API Cloud\\GroupProject\\Project\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetLibrary\\MoviePlanetLibrary.csproj",
-        "packagesPath": "C:\\Users\\gurkirat\\.nuget\\packages\\",
-        "outputPath": "D:\\OneDrive - Centennial College\\Semester6\\API Cloud\\GroupProject\\Project\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetLibrary\\obj\\",
+        "projectPath": "C:\\Users\\Arshvir\\Documents\\GitHub\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetLibrary\\MoviePlanetLibrary.csproj",
+        "packagesPath": "C:\\Users\\Arshvir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Arshvir\\Documents\\GitHub\\301112565-khaira-_301108852-singh-_Group13\\MoviePlanetLibrary\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gurkirat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Arshvir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -114,7 +106,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -163,7 +155,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

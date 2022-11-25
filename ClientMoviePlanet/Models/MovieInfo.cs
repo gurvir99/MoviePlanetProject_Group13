@@ -2,6 +2,7 @@
 {
     public class MovieInfo
     {
+        public int companyId { get; set; }
         public int movieEidr { get; set; }
         public string movieTitle { get; set; }
         public string director { get; set; }
