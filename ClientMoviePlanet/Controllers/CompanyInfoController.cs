@@ -1,18 +1,20 @@
-﻿using ClientMoviePlanet.Models;
+﻿using System.Diagnostics;
+using ClientMoviePlanet.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
+using System.Text;
 
 namespace ClientMoviePlanet.Controllers
 {
-    public class HomeController : Controller
+    public class CompanyInfoController : Controller
     {
         private readonly HttpClient _httpClient = new HttpClient();
         //Hosted web API REST Service base url
         private string uri = "http://movieplanetapi-766262829.us-east-1.elb.amazonaws.com/";
         private HttpResponseMessage response;
 
-        public HomeController()
+        public CompanyInfoController()
         {
             _httpClient.BaseAddress = new Uri(uri);
             _httpClient.DefaultRequestHeaders.Accept.Clear();
@@ -42,7 +44,7 @@ namespace ClientMoviePlanet.Controllers
                     companyInfoList.Add(companyInfo);
                 }
                 //returning the company list to view
-                return View(companyInfoList);
+                return View(Tuple.Create<CompanyInfo, IEnumerable<CompanyInfo>>(new CompanyInfo(), companyInfoList.ToList()));
             }
 
             // if no company id is selected or 0 (show all companies)
@@ -53,15 +55,57 @@ namespace ClientMoviePlanet.Controllers
             {
                 //Storing the response details received from web api
                 var companyResponse = response.Content.ReadAsStringAsync().Result;
-                //Deserializing the response recieved from web api and storing into the Employee list
+                //Deserializing the response recieved from web api and storing into the Company list
                 companyInfoList = JsonConvert.DeserializeObject<List<CompanyInfo>>(companyResponse);
             }
-            //returning the employee list to view
-            return View(companyInfoList);
+            //returning the company list to view
+            return View(Tuple.Create<CompanyInfo, IEnumerable<CompanyInfo>>(new CompanyInfo(), companyInfoList.ToList()));
+        }
+        // GET: CompanyInfoController/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+        // POST: CompanyInfoController
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Create(CompanyInfo companyInfo)
+        {
+            try
+            {
+                CompanyInfo newCompanyInfo = new CompanyInfo()
+                {
+                    companyName = companyInfo.companyName,
+                    headquarters = companyInfo.headquarters,
+                    description = companyInfo.description,
+                    yearFounded = companyInfo.yearFounded
+                };
+                string json = JsonConvert.SerializeObject(newCompanyInfo);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                response = await _httpClient.PostAsync("/api/companyInfo", content);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+        // DELETE: CompanyInfo
+        public async Task<ActionResult> Delete(int companyId)
+        {
+            try
+            {
+                response = await _httpClient.DeleteAsync($"/api/CompanyInfo?companyId={companyId}");
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return BadRequest();
+            }
         }
         public IActionResult Privacy()
         {
-           return View();
+            return View();
         }
     }
 }

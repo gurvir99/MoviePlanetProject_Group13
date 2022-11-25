@@ -46,3 +46,9 @@ button.accept-policy[b-jhgt9858jz] {
   white-space: nowrap;
   line-height: 60px;
 }
+
+label[b-jhgt9858jz] {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+}

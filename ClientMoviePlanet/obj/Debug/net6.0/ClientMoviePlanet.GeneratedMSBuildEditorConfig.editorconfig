@@ -15,16 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\ClientMoviePlanet
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/CompanyInfo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueUluZm9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/CompanyInfo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueUluZm9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kZXguY3NodG1s
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/CompanyInfo/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueUluZm9cUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/MovieInfo/MoviesByCompany.cshtml]

@@ -1,0 +1,51 @@
+﻿@model ClientMoviePlanet.Models.CompanyInfo
+
+@{
+	ViewData["Title"] = "Create Company";
+}
+
+<h1>Create Movie</h1>
+<hr />
+<div class="row">
+	<div class="col-md-2">
+		<form asp-action="Create" asp-controller="CompanyInfo" method="post" class="input-group">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="companyName" class="control-label">Company Name: </label>
+				<input asp-for="companyName" style="width: 350px" class="form-control" />
+				<span asp-validation-for="companyName" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="headquarters" class="control-label">Headquarters: </label>
+				<input asp-for="headquarters" style="width: 350px" class="form-control" />
+				<span asp-validation-for="headquarters" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="description" class="control-label">Description: </label>
+				<textarea style="width: 350px" asp-for="description" class="form-control"></textarea>
+				<span asp-validation-for="description" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="yearFounded" class="control-label">Year Founded</label>
+				<input style="width: 350px" asp-for="yearFounded" class="form-control" />
+				<span asp-validation-for="yearFounded" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<br />
+				<input type="submit" value="+ Add" class="btn btn-success" />
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<div>
+	<br />
+	<a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	}
