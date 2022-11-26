@@ -140,9 +140,10 @@ namespace MoviePlanetAPI.Controllers
             return NoContent();
         }
 
+        [Route("{companyId:int}")]
         [HttpPatch]
         public async Task<ActionResult> PartiallyUpdateCompanyInfo(int companyId,
-            JsonPatchDocument<CompanyInfoForPatchDto> patchDocument)
+            [FromBody]JsonPatchDocument<CompanyInfoForPatchDto> patchDocument)
         {
             //if (!await _moviePlanetRepository.CompanyExists(companyId))
             //{

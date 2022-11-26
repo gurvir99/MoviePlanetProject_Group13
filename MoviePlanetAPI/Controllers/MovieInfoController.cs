@@ -132,7 +132,7 @@ namespace MoviePlanetAPI.Controllers
 
             return NoContent();
         }
-
+        [Route("{movieEidr:int}")]
         [HttpPatch]
         public async Task<ActionResult> PartiallyUpdateMovieInfo(int companyId, int movieEidr,
             JsonPatchDocument<MovieForPatchDto> patchDocument)
