@@ -47,7 +47,7 @@ button.accept-policy {
   line-height: 60px;
 }
 
-label {
+.label {
     display: inline-block;
     width: 150px;
     text-align: right;

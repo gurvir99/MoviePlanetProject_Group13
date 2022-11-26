@@ -30,6 +30,7 @@ namespace ClientMoviePlanet.Controllers
             {
                 //Sending request to find web api REST service resource GetAllCompanies using HttpClient
                 response = await _httpClient.GetAsync("api/CompanyInfo/" + companyId);
+                Debug.WriteLine(response);
 
                 //Checking the response is successful or not which is sent using HttpClient
                 if (response.IsSuccessStatusCode)
@@ -48,8 +49,11 @@ namespace ClientMoviePlanet.Controllers
             }
 
             // if no company id is selected or 0 (show all companies)
+
             //Sending request to find web api REST service resource GetAllCompanies using HttpClient
             response = await _httpClient.GetAsync("api/companyInfos");
+            Debug.WriteLine(response);
+
             //Checking the response is successful or not which is sent using HttpClient
             if (response.IsSuccessStatusCode)
             {
@@ -71,37 +75,65 @@ namespace ClientMoviePlanet.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(CompanyInfo companyInfo)
         {
-            try
+            CompanyInfo newCompanyInfo = new CompanyInfo()
             {
-                CompanyInfo newCompanyInfo = new CompanyInfo()
-                {
-                    companyName = companyInfo.companyName,
-                    headquarters = companyInfo.headquarters,
-                    description = companyInfo.description,
-                    yearFounded = companyInfo.yearFounded
-                };
-                string json = JsonConvert.SerializeObject(newCompanyInfo);
-                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
-                response = await _httpClient.PostAsync("/api/companyInfo", content);
+                CompanyName = companyInfo.CompanyName,
+                Headquarters = companyInfo.Headquarters,
+                Description = companyInfo.Description,
+                YearFounded = companyInfo.YearFounded
+            };
+            string json = JsonConvert.SerializeObject(newCompanyInfo);
+            StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            response = await _httpClient.PostAsync("/api/companyInfo", content);
+            Debug.WriteLine(response);
+
+            return RedirectToAction(nameof(Index));
+
+        }
+        // GET: CompanyInfoController/Edit
+        public ActionResult Edit(int companyId, string companyName, string headquarters, string description, int yearFounded)
+        {
+            ViewBag.CompanyName = companyName;
+            ViewBag.CompanyId = companyId;
+            ViewBag.Headquarters = headquarters;
+            ViewBag.Description = description;
+            ViewBag.yearFounded = yearFounded;
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit(int companyId, CompanyInfo companyInfo)
+        {
+            CompanyInfo putCompany = new CompanyInfo()
+            {
+                CompanyName = companyInfo.CompanyName,
+                Headquarters = companyInfo.Headquarters,
+                Description = companyInfo.Description,
+                YearFounded = companyInfo.YearFounded
+            };
+            string json = JsonConvert.SerializeObject(putCompany);
+            StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            response = await _httpClient.PutAsync("api/CompanyInfo/" + companyId, content);
+            Debug.WriteLine(response);
+
+
+            if (response.IsSuccessStatusCode)
+            {
                 return RedirectToAction(nameof(Index));
             }
-            catch
-            {
-                return BadRequest();
-            }
+            return View();
+
         }
         // DELETE: CompanyInfo
         public async Task<ActionResult> Delete(int companyId)
         {
-            try
-            {
-                response = await _httpClient.DeleteAsync($"/api/CompanyInfo?companyId={companyId}");
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return BadRequest();
-            }
+
+            response = await _httpClient.DeleteAsync($"/api/CompanyInfo?companyId={companyId}");
+            Debug.WriteLine(response);
+            return RedirectToAction(nameof(Index));
+
         }
         public IActionResult Privacy()
         {

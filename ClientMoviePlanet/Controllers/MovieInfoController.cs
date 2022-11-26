@@ -97,7 +97,7 @@ namespace ClientMoviePlanet.Controllers
                     description = movieInfo.description,
                     genre = movieInfo.genre,
                     releaseDate = movieInfo.releaseDate,
-                    worldwideProfit = movieInfo.worldwideProfit,
+                    worldwideProfit = Math.Round(movieInfo.worldwideProfit),
                     imdbRating = movieInfo.imdbRating
                 };
 

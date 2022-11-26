@@ -21,19 +21,16 @@
 	<thead>
 		<tr>
 			<th>
-				Company ID
+				ID
 			</th>
 			<th>
-				Company Name
+				Name
 			</th>
 			<th>
-				Headquarters
+				Details
 			</th>
 			<th>
-				Description
-			</th>
-			<th>
-				Founded In
+				Founded
 			</th>
 			<th>
 			</th>
@@ -44,34 +41,35 @@
 		{
 			<tr>
 				<td>
-					@Html.DisplayFor(modelItem => item.companyId)
+					@Html.DisplayFor(modelItem => item.CompanyId)
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => item.companyName)
+					<strong>@Html.DisplayFor(modelItem => item.CompanyName)</strong>
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => item.headquarters)
+					<strong>@Html.DisplayFor(modelItem => item.Headquarters)</strong><br />
+					@Html.DisplayFor(modelItem => item.Description)
 				</td>
 				<td>
-					@Html.DisplayFor(modelItem => item.description)
-				</td>
-				<td>
-					@Html.DisplayFor(modelItem => item.yearFounded)
+					@Html.DisplayFor(modelItem => item.YearFounded)
 				</td>
 				<td>
 					@*              @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
 				@Html.ActionLink("Movies", "Movies", new { companyId=item.companyId })
 				@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
 					<a asp-controller="MovieInfo" asp-action="MoviesByCompany"
-				   asp-route-companyId="@item.companyId"
-				   asp-route-companyName="@item.companyName"
+				   asp-route-companyId="@item.CompanyId"
+				   asp-route-companyName="@item.CompanyName"
 				   title="Movies">Movies</a>
 					<a asp-controller="CompanyInfo" asp-action="Edit"
-				   asp-route-companyId="@item.companyId"
-				   asp-route-companyName="@item.companyName"
+				   asp-route-companyId="@item.CompanyId"
+				   asp-route-companyName="@item.CompanyName"
+				   asp-route-headquarters="@item.Headquarters"
+				   asp-route-description="@item.Description"
+				   asp-route-yearFounded="@item.YearFounded"
 				   title="Edit">Edit</a>
 					<a asp-controller="CompanyInfo" asp-action="Delete"
-				   asp-route-companyId="@item.companyId" title="Delete">Delete</a>
+				   asp-route-companyId="@item.CompanyId" title="Delete">Delete</a>
 				</td>
 			</tr>
 		}

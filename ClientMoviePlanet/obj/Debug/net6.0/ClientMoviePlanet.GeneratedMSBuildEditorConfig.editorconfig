@@ -8,49 +8,53 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ClientMoviePlanet
 build_property.RootNamespace = ClientMoviePlanet
-build_property.ProjectDir = C:\Users\Arshvir\Documents\GitHub\301112565-khaira-_301108852-singh-_Group13\ClientMoviePlanet\
+build_property.ProjectDir = D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\ClientMoviePlanet\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Arshvir\Documents\GitHub\301112565-khaira-_301108852-singh-_Group13\ClientMoviePlanet
+build_property.MSBuildProjectDirectory = D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\ClientMoviePlanet
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Arshvir/Documents/GitHub/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/CompanyInfo/Create.cshtml]
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/CompanyInfo/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueUluZm9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Arshvir/Documents/GitHub/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/CompanyInfo/Index.cshtml]
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/CompanyInfo/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueUluZm9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/CompanyInfo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueUluZm9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Arshvir/Documents/GitHub/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/CompanyInfo/Privacy.cshtml]
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/CompanyInfo/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueUluZm9cUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Arshvir/Documents/GitHub/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/MovieInfo/Create.cshtml]
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/MovieInfo/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbmZvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Arshvir/Documents/GitHub/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/MovieInfo/MoviesByCompany.cshtml]
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/MovieInfo/MoviesByCompany.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbmZvXE1vdmllc0J5Q29tcGFueS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Arshvir/Documents/GitHub/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/Shared/Error.cshtml]
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Arshvir/Documents/GitHub/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Arshvir/Documents/GitHub/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/_ViewImports.cshtml]
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Arshvir/Documents/GitHub/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/_ViewStart.cshtml]
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Arshvir/Documents/GitHub/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/Shared/_Layout.cshtml]
+[D:/OneDrive - Centennial College/Semester6/API Cloud/GroupProject/Project/301112565-khaira-_301108852-singh-_Group13/ClientMoviePlanet/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-jhgt9858jz

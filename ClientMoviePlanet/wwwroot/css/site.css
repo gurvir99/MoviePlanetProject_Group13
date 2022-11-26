@@ -42,3 +42,7 @@ img{
     width: 100%;
     text-align: center;
 }
+.input-group {
+    display: flex;
+    padding: 5px;
+}

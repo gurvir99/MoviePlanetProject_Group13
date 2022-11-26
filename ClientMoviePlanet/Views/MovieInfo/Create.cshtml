@@ -8,54 +8,54 @@
 <hr />
 <div class="row">
 	<div class="col-md-2">
-		<form asp-action="Create" asp-route-companyName="@ViewBag.CompanyName" asp-controller="MovieInfo" method="post" class="input-group">
+		<form asp-action="Create" asp-route-companyName="@ViewBag.CompanyName" asp-controller="MovieInfo" method="post">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 			<div class="form-group">
-				<label asp-for="companyId" class="control-label">Company Id: </label>
+				<label asp-for="companyId">Company Id: </label>
 				<input type="number" readonly min="0" maxlength="6" asp-for="companyId" style="width: 350px" class="form-control" />
 				<span asp-validation-for="companyId" class="text-danger"></span>
 			</div>
 			<div class="form-group">
-				<label asp-for="movieEidr" class="control-label">Movie EIDR: </label>
+				<label asp-for="movieEidr">Movie EIDR: </label>
 				<input type="number" min="0" maxlength="6" asp-for="movieEidr" style="width: 350px" class="form-control" />
 				<span asp-validation-for="movieEidr" class="text-danger"></span>
 			</div>
-			<div class="form-group">
-				<label asp-for="movieTitle" class="control-label">Movie Title: </label>
+			<div>
+				<label asp-for="movieTitle">Movie Title: </label>
 				<input type="text" asp-for="movieTitle" style="width: 350px" class="form-control" />
 				<span asp-validation-for="movieTitle" class="text-danger"></span>
 			</div>
-			<div class="form-group">
-				<label asp-for="director" class="control-label">Director: </label>
+			<div>
+				<label asp-for="director">Director: </label>
 				<input type="text" asp-for="director" style="width: 350px" class="form-control" />
 				<span asp-validation-for="director" class="text-danger"></span>
 			</div>
-			<div class="form-group">
-				<label asp-for="releaseDate" class="control-label">Release Date:</label>
+			<div>
+				<label asp-for="releaseDate">Release Date:</label>
 				<input type="date" style="width: 350px" asp-for="releaseDate" class="form-control" />
 				<span asp-validation-for="releaseDate" class="text-danger"></span>
 			</div>
-			<div class="form-group">
-				<label asp-for="genre" class="control-label">Genre: </label>
+			<div>
+				<label asp-for="genre">Genre: </label>
 				<input type="text" asp-for="genre" style="width: 350px" class="form-control" />
 				<span asp-validation-for="genre" class="text-danger"></span>
 			</div>
-			<div class="form-group">
-				<label asp-for="description" class="control-label">Description: </label>
+			<div>
+				<label asp-for="description">Description: </label>
 				<textarea style="width: 350px" asp-for="description" class="form-control"></textarea>
 				<span asp-validation-for="description" class="text-danger"></span>
 			</div>
-			<div class="form-group">
-				<label asp-for="worldwideProfit" class="control-label">Worldwide Profit: </label>
+			<div>
+				<label asp-for="worldwideProfit">Worldwide Profit: </label>
 				<input type="number" min="0" asp-for="worldwideProfit" style="width: 350px" class="form-control" />
 				<span asp-validation-for="worldwideProfit" class="text-danger"></span>
 			</div>
-			<div class="form-group">
-				<label asp-for="imdbRating" class="control-label">Imdb Rating: </label>
+			<div>
+				<label asp-for="imdbRating">Imdb Rating: </label>
 				<input type="number" step="any" min="0" asp-for="imdbRating" style="width: 350px" class="form-control" />
 				<span asp-validation-for="imdbRating" class="text-danger"></span>
 			</div>
-			<div class="form-group">
+			<div>
 				<br />
 				<input type="submit" value="+ Add" class="btn btn-success" />
 			</div>
@@ -66,7 +66,7 @@
 
 <div>
 	<br />
-	<a asp-action="MoviesByCompany" 
+	<a asp-action="MoviesByCompany"
 	 asp-route-companyId="@ViewBag.CompanyId"
 	 asp-route-companyName="@ViewBag.CompanyName">Back to List</a>
 </div>

@@ -8,29 +8,29 @@
 <hr />
 <div class="row">
 	<div class="col-md-2">
-		<form asp-action="Create" asp-controller="CompanyInfo" method="post" class="input-group">
+		<form asp-action="Create" asp-controller="CompanyInfo" method="post">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-			<div class="form-group">
-				<label asp-for="companyName" class="control-label">Company Name: </label>
-				<input asp-for="companyName" style="width: 350px" class="form-control" />
-				<span asp-validation-for="companyName" class="text-danger"></span>
+			<div>
+				<label asp-for="CompanyName">Company Name: </label>
+				<input asp-for="CompanyName" style="width: 500px" class="form-control" />
+				<span asp-validation-for="CompanyName" class="text-danger"></span>
 			</div>
-			<div class="form-group">
-				<label asp-for="headquarters" class="control-label">Headquarters: </label>
-				<input asp-for="headquarters" style="width: 350px" class="form-control" />
-				<span asp-validation-for="headquarters" class="text-danger"></span>
+			<div>
+				<label asp-for="Headquarters">Headquarters: </label>
+				<input asp-for="Headquarters" style="width: 500px" class="form-control" />
+				<span asp-validation-for="Headquarters" class="text-danger"></span>
 			</div>
-			<div class="form-group">
-				<label asp-for="description" class="control-label">Description: </label>
-				<textarea style="width: 350px" asp-for="description" class="form-control"></textarea>
-				<span asp-validation-for="description" class="text-danger"></span>
+			<div>
+				<label asp-for="Description">Description: </label>
+				<textarea style="width: 500px" asp-for="Description" class="form-control"></textarea>
+				<span asp-validation-for="Description" class="text-danger"></span>
 			</div>
-			<div class="form-group">
-				<label asp-for="yearFounded" class="control-label">Year Founded</label>
-				<input style="width: 350px" asp-for="yearFounded" class="form-control" />
-				<span asp-validation-for="yearFounded" class="text-danger"></span>
+			<div>
+				<label asp-for="YearFounded">Year Founded</label>
+				<input style="width: 500px" asp-for="YearFounded" class="form-control" />
+				<span asp-validation-for="YearFounded" class="text-danger"></span>
 			</div>
-			<div class="form-group">
+			<div>
 				<br />
 				<input type="submit" value="+ Add" class="btn btn-success" />
 			</div>
