@@ -1,0 +1,78 @@
+﻿@model ClientMoviePlanet.Models.MovieInfo
+
+@{
+	ViewData["Title"] = "Edit Movie";
+}
+
+<h1>Edit Movie: @ViewBag.movieTitle</h1>
+<hr />
+<div class="row">
+	<div class="col-md-2">
+		<form asp-action="Edit" asp-route-companyName="@ViewBag.companyName" asp-controller="MovieInfo" method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div>
+				<label asp-for="companyId" class="form-label">Company Id: </label>
+				<input type="number" min="1" value="@ViewBag.companyId" asp-for="companyId" style="width: 500px" class="form-control" />
+				<span asp-validation-for="companyId" class="text-danger"></span>
+			</div>
+			<div>
+				<label asp-for="movieEidr" class="form-label">Movie EIDR: </label>
+				<input asp-for="movieEidr" readonly style="width: 500px" class="form-control" />
+				<span asp-validation-for="movieEidr" class="text-danger"></span>
+			</div>
+			<div>
+				<label asp-for="movieTitle" class="form-label">Movie Title: </label>
+				<input asp-for="movieTitle" style="width: 500px" class="form-control" />
+				<span asp-validation-for="movieTitle" class="text-danger"></span>
+			</div>
+			<div>
+				<label asp-for="director">Director: </label>
+				<input type="text" asp-for="director" style="width: 350px" class="form-control" />
+				<span asp-validation-for="director" class="text-danger"></span>
+			</div>
+			<div>
+				<label asp-for="releaseDate">Release Date:</label>
+				<input type="date" style="width: 350px" asp-for="releaseDate" class="form-control" />
+				<span asp-validation-for="releaseDate" class="text-danger"></span>
+			</div>
+			<div>
+				<label asp-for="description">Description: </label>
+				<textarea style="width: 350px" asp-for="description" class="form-control"></textarea>
+				<span asp-validation-for="description" class="text-danger"></span>
+			</div>
+			<div>
+				<label asp-for="genre">Genre: </label>
+				<input type="text" asp-for="genre" style="width: 350px" class="form-control" />
+				<span asp-validation-for="genre" class="text-danger"></span>
+			</div>
+			<div>
+				<label asp-for="worldwideProfit">Worldwide Profit: </label>
+				<input type="number" min="0" asp-for="worldwideProfit" style="width: 350px" class="form-control" />
+				<span asp-validation-for="worldwideProfit" class="text-danger"></span>
+			</div>
+			<div>
+				<label asp-for="imdbRating">Imdb Rating: </label>
+				<input type="number" step="any" min="0" asp-for="imdbRating" style="width: 350px" class="form-control" />
+				<span asp-validation-for="imdbRating" class="text-danger"></span>
+			</div>
+			<div>
+				<br />
+				<input type="submit" value="Update" class="btn btn-success" />
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<div>
+	<br />
+	<a asp-action="MoviesByCompany"
+	   asp-route-companyId="@ViewBag.companyId"
+	   asp-route-companyName="@ViewBag.companyName">Back to List</a>
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	}

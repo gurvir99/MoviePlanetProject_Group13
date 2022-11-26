@@ -1,4 +1,5 @@
 ﻿using ClientMoviePlanet.Models;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Newtonsoft.Json;
@@ -126,6 +127,80 @@ namespace ClientMoviePlanet.Controllers
             {
                 return BadRequest();
             }
+        }
+
+        // GET: MovieInfoController/Edit
+        public ActionResult Edit(int companyId, int movieEidr, string movieTitle, string description, string genre,
+            decimal worldwideProfit, float imdbRating, string director, DateTime releaseDate, string companyName)
+        {
+            ViewBag.movieTitle = movieTitle;
+            ViewBag.companyId = companyId;
+            ViewBag.description = description;
+            ViewBag.worldwideProfit = worldwideProfit;
+            ViewBag.genre = genre;
+            ViewBag.movieEidr = movieEidr;
+            ViewBag.imdbRating = imdbRating;
+            ViewBag.director = director;
+            ViewBag.releaseDate = releaseDate;
+            ViewBag.companyName = companyName;
+   
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit(string companyName, MovieInfo movieInfo)
+        {
+            Debug.WriteLine("Company ID: " + movieInfo.companyId);
+            Debug.WriteLine("Company Name: " + companyName);
+
+            MovieInfo putCompany = new MovieInfo()
+            {
+                movieTitle = movieInfo.movieTitle,
+                companyId = movieInfo.companyId,
+                description = movieInfo.description,
+                worldwideProfit = movieInfo.worldwideProfit,
+                genre = movieInfo.genre,
+                movieEidr = movieInfo.movieEidr,
+                imdbRating = movieInfo.imdbRating,
+                director = movieInfo.director,
+                releaseDate = movieInfo.releaseDate,
+            };
+            string json = JsonConvert.SerializeObject(putCompany);
+            StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            response = await _httpClient.PutAsync("api/companyinfoes/" + movieInfo.companyId + "/movies/" + movieInfo.movieEidr, content);
+            Debug.WriteLine(response);
+
+            return RedirectToAction("MoviesByCompany", new { eidr = 0, companyName = companyName, companyId = movieInfo.companyId });
+        }
+
+        // Patch GET
+        [HttpGet]
+        public ActionResult Patch(int companyId, string movieEidr, string description, string movieTitle, string companyName)
+        {
+            ViewBag.CompanyId = companyId;
+            ViewBag.MovieEidr = movieEidr;
+            ViewBag.MovieTitle = movieTitle;
+            ViewBag.Description = description;
+            ViewBag.CompanyName = companyName;
+            return View();
+        }
+
+        // Patch
+        public async Task<ActionResult> Patch(int companyId, string movieEidr, string description, string companyName)
+        {
+            var patchDoc = new JsonPatchDocument<MovieInfo>();
+            //operation replace
+            patchDoc.Replace(e => e.description, description);
+
+            var json = JsonConvert.SerializeObject(patchDoc);
+            Debug.WriteLine(patchDoc);
+            var requestContent = new StringContent(json, Encoding.UTF8, "application/json-patch+json");
+            response = await _httpClient.PatchAsync("api/companyinfoes/" + companyId + "/movies/" + movieEidr, requestContent);
+            Debug.WriteLine(response);
+
+            return RedirectToAction("MoviesByCompany", new { eidr = 0, companyName = companyName, companyId = companyId });
         }
     }
 }

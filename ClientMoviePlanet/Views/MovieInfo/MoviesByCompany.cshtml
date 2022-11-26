@@ -64,6 +64,15 @@
 				</td>
 				<td>
 					@Html.DisplayFor(modelItem => item.description)
+					<br />
+					<a asp-controller="MovieInfo" asp-action="Patch"
+				   asp-route-companyId="@ViewBag.CompanyId"
+				   asp-route-movieEidr="@item.movieEidr"
+				   asp-route-description="@item.description"
+				   asp-route-movieTitle="@item.movieTitle"
+				   asp-route-companyName="@ViewBag.CompanyName"
+
+				   title="Patch Description">Patch Description</a>
 				</td>
 				<td>
 					@Html.DisplayFor(modelItem => item.genre)
@@ -84,8 +93,18 @@
 					@Html.DisplayFor(modelItem => item.imdbRating)
 				</td>
 				<td>
-					@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
-					@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })
+					<a asp-controller="MovieInfo" asp-action="Edit"
+				   asp-route-companyId="@ViewBag.CompanyId"
+				   asp-route-movieEidr="@item.movieEidr"
+				   asp-route-movieTitle="@item.movieTitle"
+				   asp-route-description="@item.description"
+				   asp-route-genre="@item.genre"
+				   asp-route-worldwideProfit="@item.worldwideProfit"
+				   asp-route-imdbRating="@item.imdbRating"
+				   asp-route-director="@item.director"
+				   asp-route-releaseDate="@item.releaseDate"
+				   asp-route-companyName=" @ViewBag.CompanyName"
+				   title="Edit">Edit</a>
 					<a asp-controller="MovieInfo" asp-action="Delete"
 				     asp-route-companyId=@ViewBag.CompanyId
 				     asp-route-movieEidr="@item.movieEidr"
