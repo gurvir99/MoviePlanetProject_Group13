@@ -1,0 +1,46 @@
+﻿@model ClientMoviePlanet.Models.CompanyInfo
+
+@{
+	ViewData["Title"] = "Patch Description";
+}
+
+<h1>Patch Description for Movie: @ViewBag.CompanyName</h1>
+<hr />
+<div class="row">
+	<div class="col-md-2">
+		<form asp-action="Patch" asp-controller="CompanyInfo" asp-route-description="Description" asp-route-companyId="companyId">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div>
+				<label asp-for="CompanyId" class="form-label">Company Id: </label>
+				<input type="number" readonly asp-for="CompanyId" style="width: 500px" class="form-control" />
+				<span asp-validation-for="CompanyId" class="text-danger"></span>
+			</div>
+			<div>
+				<label asp-for="CompanyName" class="form-label">Company Name: </label>
+				<input asp-for="CompanyName" readonly style="width: 500px" class="form-control" />
+				<span asp-validation-for="CompanyName" class="text-danger"></span>
+			</div>
+			<div>
+				<label asp-for="Description" class="form-label">Description: </label>
+				<textarea style="width: 500px" asp-for="Description" class="form-control"></textarea>
+				<span asp-validation-for="Description" class="text-danger"></span>
+			</div>
+			<div>
+				<br />
+				<input type="submit" value="Patch" class="btn btn-success" />
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<div>
+	<br />
+	<a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	}

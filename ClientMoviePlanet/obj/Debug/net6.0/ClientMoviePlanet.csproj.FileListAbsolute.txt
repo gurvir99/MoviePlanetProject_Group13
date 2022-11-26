@@ -484,3 +484,4 @@ C:\Users\Arshvir\Documents\GitHub\301112565-khaira-_301108852-singh-_Group13\Cli
 C:\Users\Arshvir\Documents\GitHub\301112565-khaira-_301108852-singh-_Group13\ClientMoviePlanet\obj\Debug\net6.0\ClientMoviePlanet.pdb
 C:\Users\Arshvir\Documents\GitHub\301112565-khaira-_301108852-singh-_Group13\ClientMoviePlanet\obj\Debug\net6.0\ClientMoviePlanet.genruntimeconfig.cache
 C:\Users\Arshvir\Documents\GitHub\301112565-khaira-_301108852-singh-_Group13\ClientMoviePlanet\obj\Debug\net6.0\ref\ClientMoviePlanet.dll
+D:\OneDrive - Centennial College\Semester6\API Cloud\GroupProject\Project\301112565-khaira-_301108852-singh-_Group13\ClientMoviePlanet\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll

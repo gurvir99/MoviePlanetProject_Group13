@@ -127,10 +127,5 @@ namespace ClientMoviePlanet.Controllers
                 return BadRequest();
             }
         }
-
-        /*      public IActionResult Index()
-              {
-                  return View();
-              }*/
     }
 }

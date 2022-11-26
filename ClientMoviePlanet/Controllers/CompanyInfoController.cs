@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using System.Text;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace ClientMoviePlanet.Controllers
 {
@@ -117,14 +118,53 @@ namespace ClientMoviePlanet.Controllers
 
             response = await _httpClient.PutAsync("api/CompanyInfo/" + companyId, content);
             Debug.WriteLine(response);
+            return RedirectToAction(nameof(Index));
 
-
-            if (response.IsSuccessStatusCode)
-            {
-                return RedirectToAction(nameof(Index));
-            }
+        }
+        // Patch GET
+        [HttpGet]
+        public ActionResult Patch(int companyId, string companyName, string description)
+        {
+            ViewBag.CompanyId = companyId;
+            ViewBag.CompanyName = companyName;
+            ViewBag.description = description;
             return View();
+        }
+        // Patch
+        public async Task<ActionResult> Patch(int companyId, string description)
+        {
+            JsonPatchDocument<CompanyInfo> patchDoc = new JsonPatchDocument<CompanyInfo>();
+            patchDoc.Replace(e => e.Description, description);
 
+            // serialize
+            var jsonSerializeObject = JsonConvert.SerializeObject(patchDoc);
+            Debug.WriteLine(jsonSerializeObject);
+            // create the patch request
+            var method = new HttpMethod("PATCH");
+            var request = new HttpRequestMessage(method, "api/CompanyInfo/" + companyId)
+            {
+                Content = new StringContent(jsonSerializeObject,
+                    Encoding.Unicode, "application/json")
+            };
+
+            // send it, using an HttpClient instance
+            response = await _httpClient.SendAsync(request);
+            Debug.WriteLine(response);
+
+
+
+
+            //var patchDoc = new JsonPatchDocument<CompanyInfo>();
+            ////operation replace
+            //patchDoc.Replace(e => e.Description, description);
+
+            //var json = JsonConvert.SerializeObject(patchDoc);
+            //Debug.WriteLine(patchDoc);
+            //var requestContent = new StringContent(json, Encoding.UTF8, "application/json-patch+json");
+            //response = await _httpClient.PatchAsync("api/CompanyInfo/" + companyId, requestContent);
+            //Debug.WriteLine(response);
+
+            return RedirectToAction(nameof(Index));
         }
         // DELETE: CompanyInfo
         public async Task<ActionResult> Delete(int companyId)

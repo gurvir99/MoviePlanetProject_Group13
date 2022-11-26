@@ -48,7 +48,12 @@
 				</td>
 				<td>
 					<strong>@Html.DisplayFor(modelItem => item.Headquarters)</strong><br />
-					@Html.DisplayFor(modelItem => item.Description)
+					@Html.DisplayFor(modelItem => item.Description)<br />
+					<a asp-controller="CompanyInfo" asp-action="Patch"
+				   asp-route-companyId="@item.CompanyId"
+				   asp-route-companyName="@item.CompanyName"
+				   asp-route-description="@item.Description"
+				   title="Patch Description">Patch Description</a>
 				</td>
 				<td>
 					@Html.DisplayFor(modelItem => item.YearFounded)
