@@ -12,7 +12,7 @@
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 			<div>
 				<label asp-for="companyId" class="form-label">Company Id: </label>
-				<input type="number" min="1" value="@ViewBag.companyId" asp-for="companyId" style="width: 500px" class="form-control" />
+				<input type="number" readonly min="1" value="@ViewBag.companyId" asp-for="companyId" style="width: 500px" class="form-control" />
 				<span asp-validation-for="companyId" class="text-danger"></span>
 			</div>
 			<div>
