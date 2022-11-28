@@ -8,7 +8,7 @@
 
 <p>
 	<button type="button" onclick="location.href='@Url.Action("Create", "MovieInfo", new { companyId = @ViewBag.CompanyId, companyName = ViewBag.CompanyName})'" class="btn btn-success">Add Movie</button>
-	<form asp-action="MoviesByCompany" enctype="multipart/form-data">
+	<form asp-action="MoviesByCompany" asp-route-companyName="@ViewBag.CompanyName" enctype="multipart/form-data">
 		@*enctype="multipart/form-data" is used to handle file uploads using form*@
 		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 		<div class="input-group">
